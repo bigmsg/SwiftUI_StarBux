@@ -14,8 +14,12 @@ struct ContentView: View {
         
         return ZStack(alignment: .topLeading) {
             BackSplash()
-            TopView()
-            TopCard()
+            TopView().background(Color.yellow)
+            
+            ZStack {
+                TopCard().background(Color.blue)
+                BottomCard()
+            }.background(Color.pink)
         }
 
     }

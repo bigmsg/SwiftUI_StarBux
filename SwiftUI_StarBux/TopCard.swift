@@ -44,11 +44,21 @@ struct TopCard: View {
                                         )
                                 }
                             }
-                        }
-                    }
-                }
+                        }.background(Color.red)
+                    }//end scrollView
+                    VStack (alignment: .leading) {
+                        Text("Caramel Creme Frappuccino")
+                            .fontWeight(.heavy)
+                            .font(.title)
+                            .foregroundColor(Color("darkGreen"))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .lineLimit(nil)
+                        
+                    }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
+                }.frame(width: 240)
+                    .padding(.trailing, 50)
                 
-            }
+            }.padding(.trailing, 3)
         }
     }
 }
